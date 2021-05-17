@@ -1,0 +1,6 @@
+{
+    "overall_trajectory_path": "data/overall-trajectory.csv",
+    "n_species": 200,
+    "n_LSPs": 5,
+    "local_pool_size": 150
+}
