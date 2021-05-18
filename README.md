@@ -6,17 +6,17 @@ Described in this repository the _ tasks that you need to do this week.
 
 First of all, you need a github account. Please make one and send me the name of your account. 
 
-Then you can read the following website to learn about github: 
+Then you can read the following website to learn about github: \\
 `https://guides.github.com/introduction/git-handbook/`
 
-Please familiarise yourself with the basic operations, especially: 
+Please familiarise yourself with the basic operations, especially: \\
 - `git clone` 
 - `git fetch` 
 - `git merge`
 - `git add` 
 - `git commit`
 
-Another useful command that is important to learn is opening a pull request. You can learn more about it here: 
+Another useful command that is important to learn is opening a pull request. You can learn more about it here: \\
 `https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request`
 
 ### 2. Generating Forest Data from Stochastic Processes
