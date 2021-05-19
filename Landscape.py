@@ -14,14 +14,14 @@ class LSP:
         """
         Sample randomly from species_list
         """
-        raise ValueError("Implement me!")
+        raise NotImplementedError
 
     def simulate(self):
         n = len(self.species_list) # number of species
         t = len(self.mort_t) # time
         M = np.zeros((n, t)) # Empty 2-dimensional matrix
 
-        raise ValueError("Implement me!")
+        raise NotImplementedError
 
         return M
 
@@ -43,7 +43,7 @@ class GSP:
 
         Remark: Assume that the recr_t and mort_t are the same for every LSPs in LSP_list
         """
-        raise ValueError("Implement me!")
+        raise NotImplementedError
 
     def simulate(self):
         """Simulate succession according to a fixed trajectory
@@ -53,7 +53,7 @@ class GSP:
         t = len(self.mort_t) # time
         M = np.zeros((n, m, t)) # Empty 3-dimensional matrix
 
-        raise ValueError("Implement me!") # Hint: use LSP.simulate
+        raise NotImplementedError # Hint: use LSP.simulate
 
         return M
 
