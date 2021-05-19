@@ -36,7 +36,6 @@ Implement the following functions in `Landscape.py`:
 2. `LSP.simulate`: Simulates `t` years of local succession where the overall recruitment and mortality must equal to 
 the `recr_trajectory` and  `mort_trajectory` attributes, respectively. At every year, the choice of species to be recruited is a random draw from the species
 in the local species pool. Whilst, the choice of species to die at every year is a random draw from the species that are already established in the plot.
-
   The function should return `M`, a `n x t` matrix where `n` is the number of species in the local species pool and `t` is the number of years (speciefied by 
 `recr_trajectory` and  `mort_trajectory`). 
 
@@ -44,7 +43,6 @@ in the local species pool. Whilst, the choice of species to die at every year is
 
 4. `GSP.simulate`: Simulates `t` years of global succession where the overall recruitment and mortality must equal to 
 the `recr_trajectory` and  `mort_trajectory` attributes, respectively.
-
   The function should return `M`, a `n x m x t` matrix where `n` is the number of species in the local species pool, `m` is the number of localities
 and `t` is the number of years (speciefied by `recr_trajectory` and  `mort_trajectory`). (Hint: use `LSP.simulate`)
 
