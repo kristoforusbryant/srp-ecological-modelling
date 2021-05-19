@@ -2,11 +2,10 @@
 
 
 ### 0. Software Prerequisites
-Please install Python 3 including the following packages: 
-- numpy 
+Please install [Python3](https://www.python.org/downloads/) including the following packages: 
+- numpy
 - pandas 
 - pytest
-
 
 ### 1. Basic Git commands 
 
@@ -51,11 +50,11 @@ and `t` is the number of years (speciefied by `recr_trajectory` and  `mort_traje
 
 
 ### 3. Testing
-Once the implementation is done. Test your implementation with the provided test in `tests.py`. You are encouraged to add additional tests to make sure that your code is correct. 
+Once the implementation is done. Test your implementation with the provided test in `test.py`. You are encouraged to add additional tests to make sure that your code is correct. 
 
 The test can be run using the command: 
 
-`pytest tests.py`
+`pytest test.py`
 
 Once the program is done and tested, stage a pull request on this github. 
 
