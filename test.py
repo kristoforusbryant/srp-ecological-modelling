@@ -27,7 +27,7 @@ def test_sample_1():
 
 def test_simulate_0():
     lsp = LSP([1,2,3,4], [10, 20, 30, 40, 40], [0, 10, 20, 10, 30])
-    trajectory = np.array([10, 20, 30, 40, 40]) - np.array([0, 10, 20, 10, 30])
+    trajectory = lsp.recr_trajectory - lsp.mort_trajectory
     M = lsp.simulate()
     assert(M.shape == (4, 5))
     assert(M.sum(axis=0) == trajectory)
@@ -47,7 +47,7 @@ def test_initialise_LSPs():
 def test_simulate():
     gsp = GSP(np.arange(10))
     gsp.initialise_LSPs(4, 5, [10, 20, 30, 40, 40], [0, 10, 20, 10, 30])
-    trajectory = np.array([10, 20, 30, 40, 40]) - np.array([0, 10, 20, 10, 30])
+    trajectory = lsp.recr_trajectory - lsp.mort_trajectory
     M = gsp.simulate()
 
     assert(M.shape == (4, 5, 5))
