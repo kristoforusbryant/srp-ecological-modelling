@@ -15,14 +15,14 @@ def test_parser():
 from Landscape import LSP
 def test_sample_0():
     lsp = LSP([1,2,3,4], [10, 20, 30, 40, 40], [0, 10, 20, 10, 30])
-    for _ in 100:
+    for _ in np.arange(100):
         assert(lsp.sample() in [1,2,3,4])
 
 def test_sample_1():
-    for _ in 50:
+    for _ in np.arange(50):
         l = np.random.choice(np.arange(100), 5)
         lsp = LSP(l, [10, 20, 30, 40, 40], [0, 10, 20, 10, 30])
-        for _ in 100:
+        for _ in range(100):
             assert(lsp.sample() in l)
 
 def test_simulate_0():
