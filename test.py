@@ -22,7 +22,7 @@ def test_sample_1():
     for _ in np.arange(50):
         l = np.random.choice(np.arange(100), 5)
         lsp = LSP(l, [10, 20, 30, 40, 40], [0, 10, 20, 10, 30])
-        for _ in range(100):
+        for _ in np.arange(100):
             assert(lsp.sample() in l)
 
 def test_simulate_0():
@@ -41,7 +41,7 @@ def test_initialise_LSPs():
     gsp.initialise_LSPs(4, 5, [10, 20, 30, 40, 40], [0, 10, 20, 10, 30])
 
     assert(len(gsp.LSP_list) == 4)
-    for i in range(4):
+    for i in np.arange(4):
         assert(gsp.LSP_list[i].get_size() == 5)
 
 def test_simulate():
@@ -51,7 +51,7 @@ def test_simulate():
     M = gsp.simulate()
 
     assert(M.shape == (4, 5, 5))
-    for i in range(4):
+    for i in np.arange(4):
         assert(M[i].sum(axis=0) == trajectory)
 
 
