@@ -1,4 +1,4 @@
-# Ecological Modelling SRP Week 1
+# Ecological Modelling SRP Task 1
 
 
 ### 0. Software Prerequisites
@@ -47,7 +47,7 @@ and `t` is the number of years (speciefied by `recr_trajectory` and  `mort_traje
 
 
 ### 3. Testing
-Once the implementation is done. Test your implementation with the provided test in `test.py`. You are encouraged to add additional tests to make sure that your code is correct. 
+Once the implementation is done, test your implementation with the provided test in `test.py`. You are encouraged to add additional tests to make sure that your code is correct. 
 
 The test can be run using the command: 
 
