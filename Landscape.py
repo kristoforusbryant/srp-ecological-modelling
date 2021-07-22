@@ -14,14 +14,30 @@ class LSP:
         """
         Sample randomly from species_list
         """
-        raise NotImplementedError
+        return np.random.choice(self.species_list)
 
     def simulate(self):
         n = len(self.species_list) # number of species
-        t = len(self.mort_t) # time
-        M = np.zeros((n, t)) # Empty 2-dimensional matrix
+        t = len(self.mort_trajectory) # time
+        M = np.zeros((n, t)) # empty 2-dimensional matrix
 
-        raise NotImplementedError
+        for generation in np.arange(t):
+            temp = M[:, generation]
+            
+            # Death
+            for _ in np.arange(self.mort_trajectory[generation]):
+                n_index = np.random.choice(np.where(temp)[0])
+                temp[n_index] -= 1
+            
+            # Recruitment
+            for _ in np.arange(self.recr_trajectory[generation]):
+                n_index = np.random.choice(np.arange(n))
+                temp[n_index] += 1
+            
+            M[:, generation] = temp
+            
+            if generation != (t - 1):
+                M[:, generation + 1] = temp
 
         return M
 
@@ -43,7 +59,9 @@ class GSP:
 
         Remark: Assume that the recr_t and mort_t are the same for every LSPs in LSP_list
         """
-        raise NotImplementedError
+        for i in np.arange(n):
+            lsp_list = np.random.choice(self.species_list, k, replace=False)
+            self.LSP_list.append(LSP(lsp_list, recr_t, mort_t))
 
     def simulate(self):
         """Simulate succession according to a fixed trajectory
@@ -51,9 +69,10 @@ class GSP:
         n = len(self.species_list) # number of species
         m = len(self.LSP_list) # number of localities
         t = len(self.LSP_list[0].mort_trajectory) # time
-        M = np.zeros((n, m, t)) # Empty 3-dimensional matrix
+        M = np.zeros((m, n, t)) # empty 3-dimensional matrix
 
-        raise NotImplementedError # Hint: use LSP.simulate
+        for i in np.arange(m):
+            M[i] = self.LSP_list[i].simulate() 
 
         return M
 
