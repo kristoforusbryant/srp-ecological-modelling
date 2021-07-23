@@ -38,3 +38,6 @@ This data is provided in `data/recr_data.csv` and `data/mort_data.csv`. Refer to
 
 To save the `n x m x t` matrix output of `GSP.simulate`,  run:
 `python main.py --outfile results/out_matrix.pkl –-params params.json`
+
+
+
