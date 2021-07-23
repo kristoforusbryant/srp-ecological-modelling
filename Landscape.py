@@ -32,7 +32,7 @@ class LSP:
 
     def simulate(self):
         n = len(self.species_list) # number of species
-        t = len(self.mort_t) # time
+        t = len(self.mort_trajectory) # time
         M = np.zeros((n, t)) # Empty 2-dimensional matrix
 
         raise NotImplementedError
