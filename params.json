@@ -1,7 +1,5 @@
 {
     "overall_trajectory_path": "data/overall-trajectory.csv",
-    "recr_weights_path": "data/recr_data.csv",
-    "mort_weights_path": "data/mort_data.csv",
     "n_species": 200,
     "n_LSPs": 5,
     "local_pool_size": 150
