@@ -66,7 +66,7 @@ class GSP:
         """
         n = len(self.species_list) # number of species
         m = len(self.LSP_list) # number of localities
-        t = len(self.mort_t) # time
+        t = len(self.LSP_list[0].mort_trajectory) # time
         M = np.zeros((n, m, t)) # Empty 3-dimensional matrix
 
         raise NotImplementedError # Hint: use LSP.simulate
