@@ -1,4 +1,10 @@
 import numpy as np
+import sys, os
+
+currdir = os.path.dirname(__file__)
+sys.path.append(os.path.dirname(currdir))
+print(os.path.dirname(currdir))
+print(sys.path)
 
 # Parser
 import Parser
@@ -7,8 +13,8 @@ def test_parser():
     """
     sys_args = ['--outfile', 'results/out_matrix.pkl', '--params', 'params.json']
     parser = Parser.Parser(sys_args)
-    assert(isinstance(parser.args.file, str))
-    assert(isinstance(parser.args.dollar_size, str))
+    assert(isinstance(parser.args.outfile, str))
+    assert(isinstance(parser.args.params, str))
 
 # Landscape: LSP
 from Landscape import LSP
