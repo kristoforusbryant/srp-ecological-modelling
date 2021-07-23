@@ -6,7 +6,7 @@ In the previous task, you have implemented a forest model such that recruitment 
 random on all species existing in the plot.
 
 Now, your task is to expand this model to incorporate knowledge about how species. I have expanded the definition of the LSP class in
-`Landscape.py` to include to additional attributes: `recr_prob` and `mort_prob`. These `n x t` matrices of (unscaled) probability weights for every
+`Landscape.py` to include to additional attributes: `recr_prob` and `mort_prob`. These `n x t` matrices of **unscaled** probability weights for every
 `n` species and for every of the `t` years we simulate.
 
 Implement the following functions in `Landscape.py`:
@@ -23,7 +23,7 @@ the `recr_trajectory` and  `mort_trajectory` attributes, respectively. At every 
 ### 3. Testing
 Similar to before, once the implementation is done, test your implementation with the provided test in `test.py`.
 
-5. Implement `test_simulate_1` and `test_simulate_GSP_1` which adds into the test suite. You are encouraged to add even more tests.
+5. Implement `test_simulate_1` and `test_simulate_GSP_1` which adds into the test suited. You are encouraged to add even more tests.
 
 Once the implementation is done, test your implementation with the provided test in `test.py`. You are encouraged to add additional tests to make sure that your code is correct.
 
@@ -36,7 +36,7 @@ Once the program is done and tested, stage a pull request on this github.
 ### 4. Generating Result
 This data is provided in `data/recr_data.csv` and `data/mort_data.csv`. Refer to `main.py` to see how this dataset is incorporated to the program.
 
-To save the `n x m x t` matrix output of `GSP.simulate`,  run:
+To save the `m x n x t` matrix output of `GSP.simulate`,  run:
 `python main.py --outfile results/out_matrix.pkl –-params params.json`
 
 
