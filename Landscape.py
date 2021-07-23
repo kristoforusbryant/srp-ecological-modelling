@@ -2,12 +2,12 @@ import numpy as np
 class LSP:
     """Local Species Pool
     """
-    def __init__(self, species_list, recr_trajectory, mort_trajectory, recr_prob, mort_prob):
+    def __init__(self, species_list, recr_trajectory, mort_trajectory, recr_probs, mort_probs):
         self.species_list = species_list
         self.recr_trajectory = recr_trajectory
         self.mort_trajectory = mort_trajectory
-        self.recr_prob = recr_prob
-        self.mort_prob = mort_prob
+        self.recr_prob = recr_probs
+        self.mort_prob = mort_probs
 
     def get_size(self):
         return len(self.species_list)
@@ -18,15 +18,25 @@ class LSP:
         """
         raise NotImplementedError
 
+        return id
+
     def kill(self, a, t):
-        """
-        Sample randomly from a according to the recruitment weight at time t
+        """ Sample randomly from the species_list according to the mortality weight at time t
+
+        Args:
+            a (iterable): array of species as time t - 1
+            t (int): time
+
+        Return:
+            id (int): species id sampled
         """
         raise NotImplementedError
 
+        return id
+
     def simulate(self):
         n = len(self.species_list) # number of species
-        t = len(self.mort_t) # time
+        t = len(self.mort_trajectory) # time
         M = np.zeros((n, t)) # Empty 2-dimensional matrix
 
         raise NotImplementedError
