@@ -18,12 +18,14 @@ Implement the following functions in `Landscape.py`:
 3. `LSP.simulate`: Simulates `t` years of local succession where the overall recruitment and mortality must equal to
 the `recr_trajectory` and  `mort_trajectory` attributes, respectively. At every year, the choice of species to be recruited is a random draw weighted by `recr_prob` attribute at the particular year. The choice of species to die at every year is a random draw from the species that are already established in the plot weighted by `mort_prob`.
 
-  The function should return `M`, a `n x t` matrix where `n` is the number of species in the local species pool and `t` is the number of years (speciefied by `recr_trajectory` and  `mort_trajectory`).
-
 4. `GSP.initialise_LSPs`: Update the previous version to incorporate arguments `recr_prob` and `mort_prob`.
 
 ### 3. Testing
-Similar to before, once the implementation is done, test your implementation with the provided test in `test.py`. You are encouraged to add additional tests to make sure that your code is correct.
+Similar to before, once the implementation is done, test your implementation with the provided test in `test.py`.
+
+5. Implement `test_simulate_1` and `test_simulate_GSP_1` which adds into the test suite. You are encouraged to add even more tests.
+
+Once the implementation is done, test your implementation with the provided test in `test.py`. You are encouraged to add additional tests to make sure that your code is correct.
 
 The test can be run using the command:
 
@@ -36,6 +38,3 @@ This data is provided in `data/recr_data.csv` and `data/mort_data.csv`. Refer to
 
 To save the `n x m x t` matrix output of `GSP.simulate`,  run:
 `python main.py --outfile results/out_matrix.pkl –-params params.json`
-
-
-
