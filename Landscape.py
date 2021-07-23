@@ -12,12 +12,6 @@ class LSP:
     def get_size(self):
         return len(self.species_list)
 
-    def sample(self):
-        """
-        Sample randomly from species_list
-        """
-        raise NotImplementedError
-
     def recruit(self, t):
         """
         Sample randomly from the species_list according to the recruitment weight at time t
