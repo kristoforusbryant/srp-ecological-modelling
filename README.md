@@ -20,7 +20,7 @@ the `recr_trajectory` and  `mort_trajectory` attributes, respectively. At every 
 
 4. `GSP.initialise_LSPs`: Update the previous version to incorporate arguments `recr_prob` and `mort_prob`.
 
-### 3. Testing
+### 2. Testing
 Similar to before, once the implementation is done, test your implementation with the provided test in `test.py`.
 
 5. Implement `test_simulate_1` and `test_simulate_GSP_1` which adds into the test suited. You are encouraged to add even more tests.
@@ -33,7 +33,7 @@ The test can be run using the command:
 
 Once the program is done and tested, stage a pull request on this github.
 
-### 4. Generating Result
+### 3. Generating Result
 This data is provided in `data/recr_data.csv` and `data/mort_data.csv`. Refer to `main.py` to see how this dataset is incorporated to the program.
 
 To save the `m x n x t` matrix output of `GSP.simulate`,  run:
