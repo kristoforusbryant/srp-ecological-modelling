@@ -23,19 +23,19 @@ class LSP:
 
         for generation in np.arange(t):
             temp = M[:, generation]
-            
+
             # Death
             for _ in np.arange(self.mort_trajectory[generation]):
                 n_index = np.random.choice(np.where(temp)[0])
                 temp[n_index] -= 1
-            
+
             # Recruitment
             for _ in np.arange(self.recr_trajectory[generation]):
                 n_index = np.random.choice(np.arange(n))
                 temp[n_index] += 1
-            
+
             M[:, generation] = temp
-            
+
             if generation != (t - 1):
                 M[:, generation + 1] = temp
 
@@ -71,6 +71,6 @@ class GSP:
         M = np.zeros((m, n, t)) # empty 3-dimensional matrix
 
         for i in np.arange(m):
-            M[i] = self.LSP_list[i].simulate() 
+            M[i] = self.LSP_list[i].simulate()
 
         return M
