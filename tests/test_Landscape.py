@@ -38,7 +38,10 @@ def test_sample_1():
 
 def test_sample_2():
     spec_l = [1, 2, 3, 4]
-    recr_probs = np.array([[0, 0, 1, 0, 0]] * 4)
+    recr_probs = np.array([ [0, 0, 0, 0, 0],
+                            [0, 0, 0, 0, 0],
+                            [1, 1, 1, 1, 1],
+                            [0, 0, 0, 0, 0] ])
 
     mort_probs = np.ones((len(spec_l), len(recr_t)))
 
